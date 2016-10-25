@@ -17,8 +17,8 @@
 mkdir -p generated/
 
 # Create the files anew
-cp -f /dev/null generated/functions.cc
-cp -f /dev/null generated/function-prototypes.h
+touch generated/functions.cc
+touch generated/function-prototypes.h
 
 echo '#ifndef __IOTIVITY_NODE_FUNCTION_PROTOTYPES_H__' >> generated/function-prototypes.h
 echo '#define __IOTIVITY_NODE_FUNCTION_PROTOTYPES_H__' >> generated/function-prototypes.h
