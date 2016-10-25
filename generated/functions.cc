@@ -1,0 +1,37 @@
+#include "../src/functions.h"
+#include "function-prototypes.h"
+
+NAN_MODULE_INIT(InitFunctions) {
+  SET_FUNCTION(target, OCBindResource);
+  SET_FUNCTION(target, OCBindResourceHandler);
+  SET_FUNCTION(target, OCBindResourceInterfaceToResource);
+  SET_FUNCTION(target, OCBindResourceTypeToResource);
+  SET_FUNCTION(target, OCCancel);
+  SET_FUNCTION(target, OCCreateResource);
+  SET_FUNCTION(target, OCDeleteResource);
+  SET_FUNCTION(target, OCDoResource);
+  SET_FUNCTION(target, OCDoResponse);
+  SET_FUNCTION(target, OCGetNumberOfResourceInterfaces);
+  SET_FUNCTION(target, OCGetNumberOfResources);
+  SET_FUNCTION(target, OCGetNumberOfResourceTypes);
+  SET_FUNCTION(target, OCGetResourceHandle);
+  SET_FUNCTION(target, OCGetResourceHandleFromCollection);
+  SET_FUNCTION(target, OCGetResourceHandler);
+  SET_FUNCTION(target, OCGetResourceInterfaceName);
+  SET_FUNCTION(target, OCGetResourceProperties);
+  SET_FUNCTION(target, OCGetResourceTypeName);
+  SET_FUNCTION(target, OCGetResourceUri);
+  SET_FUNCTION(target, OCGetServerInstanceIDString);
+  SET_FUNCTION(target, OCInit);
+  SET_FUNCTION(target, OCNotifyAllObservers);
+  SET_FUNCTION(target, OCNotifyListOfObservers);
+  SET_FUNCTION(target, OCProcess);
+  SET_FUNCTION(target, OCRegisterPersistentStorageHandler);
+  SET_FUNCTION(target, OCSetDefaultDeviceEntityHandler);
+  SET_FUNCTION(target, OCSetDeviceInfo);
+  SET_FUNCTION(target, OCSetPlatformInfo);
+  SET_FUNCTION(target, OCStartPresence);
+  SET_FUNCTION(target, OCStop);
+  SET_FUNCTION(target, OCStopPresence);
+  SET_FUNCTION(target, OCUnBindResource);
+}
