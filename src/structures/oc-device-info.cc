@@ -92,8 +92,7 @@ freeAndQuit:
 }
 
 bool c_OCDeviceInfo(Local<Object> deviceInfo, OCDeviceInfo *info) {
-  OCDeviceInfo local = {
-      .deviceName = 0, .types = 0, .specVersion = 0, .dataModelVersions = 0};
+  OCDeviceInfo local = { 0 };
 
   VALIDATE_AND_ASSIGN_STRING(&local, deviceName, deviceInfo,
                              c_OCDeviceInfoFreeMembers, false);

@@ -30,7 +30,7 @@ Local<Object> js_OCDevAddr(OCDevAddr *address) {
 
   SET_VALUE_ON_OBJECT(returnValue, Number, address, adapter);
   SET_VALUE_ON_OBJECT(returnValue, Number, address, flags);
-  SET_VALUE_ON_OBJECT(returnValue, Number, address, interface);
+  SET_VALUE_ON_OBJECT(returnValue, Number, address, ifindex);
   SET_VALUE_ON_OBJECT(returnValue, Number, address, port);
 
   // addr.addr
@@ -53,7 +53,7 @@ bool c_OCDevAddr(Local<Object> jsDevAddr, OCDevAddr *address) {
                       false, jsDevAddr, Uint32Value);
   VALIDATE_AND_ASSIGN(local, flags, OCTransportFlags, IsUint32, "addr", false,
                       jsDevAddr, Uint32Value);
-  VALIDATE_AND_ASSIGN(local, interface, uint32_t, IsUint32, "addr", false,
+  VALIDATE_AND_ASSIGN(local, ifindex, uint32_t, IsUint32, "addr", false,
                       jsDevAddr, Uint32Value);
   VALIDATE_AND_ASSIGN(local, port, uint16_t, IsUint32, "addr", false, jsDevAddr,
                       Uint32Value);

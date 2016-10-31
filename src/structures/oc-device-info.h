@@ -18,9 +18,7 @@
 #define __IOTIVITY_NODE_OCDEVICEINFO_H__
 
 #include <v8.h>
-extern "C" {
-#include <ocstack.h>
-}
+#include <octypes.h>
 
 v8::Local<v8::Object> js_OCDeviceInfo(OCDeviceInfo *deviceInfo);
 bool c_OCDeviceInfo(v8::Local<v8::Object> deviceInfo, OCDeviceInfo *info);
